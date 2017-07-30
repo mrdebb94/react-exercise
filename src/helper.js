@@ -1,5 +1,5 @@
 export function isNumber(n) {
-  return !isNaN(parseFloat(n)) && isFinite(n);
+  return !isNaN(parseInt(n)) && !isNaN(parseFloat(n)) && isFinite(n);
 }
 
 /*export function isNumber(n) {

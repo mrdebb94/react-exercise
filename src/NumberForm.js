@@ -79,7 +79,7 @@ class NumberForm extends React.Component {
          
          } else {
          
-            errorMessage+=("The wrong element: " + elements[i] + "  A number can contains only digits (0-9) and decimal point (.)");
+            errorMessage+=("The wrong element: " + elements[i] + "  A number can contains only digits (0-9) and max one decimal point (.) and must begin digit");
          
          }
         
@@ -106,7 +106,7 @@ class NumberForm extends React.Component {
     
     <form>
     <div className={"form-group" + " " + (this.state.error.status==true?"has-danger":"has-success")}>
-    <label htmlFor="numbers" className="form-control-label">Please give a number or sequence of numbers:</label>
+    <label htmlFor="numbers" className="form-control-label">Please give a number or sequence of numbers separated commas:</label>
     <input type='text' className={"form-control" + " " + (this.state.error.status==true?"form-control-danger":"form-control-success")} 
     value={this.state.text} id="numbers" onChange={this.handleChange} onBlur={this.handleBlur}/>
    
