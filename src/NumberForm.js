@@ -107,8 +107,8 @@ class NumberForm extends React.Component {
     <form>
     <div className={"form-group" + " " + (this.state.error.status==true?"has-danger":"has-success")}>
     <label htmlFor="numbers" className="form-control-label">Please give a number or sequence of numbers separated commas:</label>
-    <input type='text' className={"form-control" + " " + (this.state.error.status==true?"form-control-danger":"form-control-success")} 
-    value={this.state.text} id="numbers" onChange={this.handleChange} onBlur={this.handleBlur}/>
+    <textarea className={"form-control" + " " + (this.state.error.status==true?"form-control-danger":"form-control-success")} 
+    value={this.state.text} id="numbers" onChange={this.handleChange} onBlur={this.handleBlur}></textarea>
    
     {this.state.error.status&&<div className="form-control-feedback">{this.state.error.message}</div>}
     </div>
